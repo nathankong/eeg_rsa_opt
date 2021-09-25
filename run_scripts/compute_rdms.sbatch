@@ -12,7 +12,7 @@
 #SBATCH --error=errs/k_all.err
 #################
 #SBATCH --time=24:00:00
-#SBATCH -p hns,normal
+#SBATCH -p hns,normal,owners
 #################
 # --gres will give you one GPU, you can ask for more, up to 8 (or how ever many are on the node/card)
 # We are submitting to the gpu partition, if you can submit to the hns partition, change this to -p hns_gpu.
