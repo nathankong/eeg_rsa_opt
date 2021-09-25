@@ -37,7 +37,17 @@ do
         out="outs/${layer}_${dist}_${model}.out"
         err="errs/${layer}_${dist}_${model}.err"
 
-        sbatch -p hns,gpu --job-name=$jn --output=$out --error=$err --nodes=1 --mail-type=FAIL --mail-user=nclkong@stanford.edu --gpus=1 --time=$t --mem=50G --wrap="bash $script $layer $dist $model"
+        sbatch -p hns,gpu \
+            --job-name=$jn \
+            --output=$out \
+            --error=$err \
+            --nodes=1 \
+            --mail-type=FAIL \
+            --mail-user=nclkong@stanford.edu \
+            --gpus=1 \
+            --time=$t \
+            --mem=50G \
+            --wrap="bash $script $layer $dist $model"
         sleep 0.5
 
         echo "${layer}, ${dist}, ${model}"

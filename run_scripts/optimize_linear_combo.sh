@@ -21,5 +21,16 @@ echo "Epsilon: " $eps
 echo "Latent dim: " $latentdim
 echo "Model: " $model
 
-python ${GROUP_HOME}/nclkong/eeg_neuralnetwork_rsa/compute_optimal_correlation_flex.py --dataset kaneshiro --distance $dist --model $model --rdms-dir $rdms_dir --nfolds 4 --layer $layer --results-dir $optim_results_dir --layer-features-path $lfpath --latentdim $latentdim --lr $lr --eps $eps
+python ${GROUP_HOME}/nclkong/eeg_neuralnetwork_rsa/compute_optimal_correlation_flex.py \
+    --dataset kaneshiro \
+    --distance $dist \
+    --model $model \
+    --rdms-dir $rdms_dir \
+    --nfolds 4 \
+    --layer $layer \
+    --results-dir $optim_results_dir \
+    --layer-features-path $lfpath \
+    --latentdim $latentdim \
+    --lr $lr \
+    --eps $eps
 

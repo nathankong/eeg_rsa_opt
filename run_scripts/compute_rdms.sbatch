@@ -31,6 +31,10 @@ module load py-scipystack
 module load py-scikit-learn
 module load py-numpy
 
-srun python ${GROUP_HOME}/nclkong/eeg_neuralnetwork_rsa/perform_all_analyses_new.py --dataset kaneshiro --results-dir ${GROUP_HOME}/nclkong/eeg_neuralnetwork_rsa/base_results_dir/ --data-file-path ${GROUP_HOME}/eeg_data/kaneshiro_data/kaneshiro_eeg.npy --layer-rdm-dir ${GROUP_HOME}/nclkong/eeg_neuralnetwork_rsa/layer_rdm_ps/
+srun python ${GROUP_HOME}/nclkong/eeg_neuralnetwork_rsa/perform_all_analyses_new.py \
+    --dataset kaneshiro \
+    --results-dir ${GROUP_HOME}/nclkong/eeg_neuralnetwork_rsa/base_results_dir/ \
+    --data-file-path ${GROUP_HOME}/eeg_data/kaneshiro_data/kaneshiro_eeg.npy \
+    --layer-rdm-dir ${GROUP_HOME}/nclkong/eeg_neuralnetwork_rsa/layer_rdm_ps/
 
 
